@@ -1,0 +1,21 @@
+import canonicalLaneMathlib.AdmissibleClass
+import EvolutionaryBiologyEvolutionaryDevelopmentalBiologyCanonicalLaneLean.PopulationDynamicsBridge
+import EvolutionaryBiologyEvolutionaryDevelopmentalBiologyCanonicalLaneLean.EvolutionaryGameTheory
+import EvolutionaryBiologyEvolutionaryDevelopmentalBiologyCanonicalLaneLean.DevelopmentalGeneNetwork
+
+namespace HautevilleHouse
+namespace EvolutionaryBiologyEvolutionaryDevelopmentalBiologyCanonicalLaneLean
+
+open PopulationDynamicsBridge
+open EvolutionaryGameTheory
+open DevelopmentalGeneNetwork
+
+def EvolutionaryBiologyClosure (A : AdmissibleClass) : Prop :=
+  bridgeClosed A ∧ gateClosed A
+
+theorem evolutionary_biology_endgame (A : AdmissibleClass) :
+    EvolutionaryBiologyClosure A :=
+  And.intro (bridge_from_admissible_class A) (gate_from_admissible_class A)
+
+end EvolutionaryBiologyEvolutionaryDevelopmentalBiologyCanonicalLaneLean
+end HautevilleHouse
